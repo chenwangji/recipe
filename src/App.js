@@ -54,7 +54,6 @@ class App extends Component {
       mode: 'cors'
     })
     const { recipes } = await res.json()
-    console.log(222)
     Nprogress.done()
     this.setState({ recipes })
   }
