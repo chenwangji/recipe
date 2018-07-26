@@ -13,7 +13,7 @@ cache:
 install:
 - npm install
 script:
-- git config --global user.email "694093637@qq.com"
-- git config --global user.name "chenwangji"
+# - git config --global user.email "694093637@qq.com"
+# - git config --global user.name "chenwangji"
 - npm run deploy
 
