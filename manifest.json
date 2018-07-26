@@ -1,6 +1,6 @@
 {
-  "short_name": "my recipe",
-  "name": "my recipe",
+  "short_name": "Recipe Search",
+  "name": "Recipe Search",
   "icons": [
     {
       "src": "favicon.ico",
