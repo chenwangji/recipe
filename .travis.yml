@@ -1,12 +1,19 @@
 language: node_js
-node_js: 
-  - "8"
+node_js:
+- '8'
 cache:
   directories:
-    - "node_modules"
-install: 
-  - npm install
-script: 
-  - git config --global user.email "chenwangji@hebao.im"
-  - git config --global user.name "chenwangji"
-  - npm run deploy
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K $encrypted_addb820f5bf3_key -iv $encrypted_addb820f5bf3_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+# 添加如下两行内容，Host后面的ip替换成你的部署服务器地址
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host https://chenwangji.github.io/recipe\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+install:
+- npm install
+script:
+- git config --global user.email "chenwangji@hebao.im"
+- git config --global user.name "chenwangji"
+- npm run deploy
+
