@@ -3,9 +3,8 @@
  */
 var ghpages = require('gh-pages')
 
-console.log(process.env.GH_TOKEN)
+// console.log(process.env.GH_TOKEN)
 
 ghpages.publish('build', {
-  repo: 'https://' + process.env.GH_TOKEN + '@github.com/chenwangji/recipe.git',
-  silent: true
-}, callback)
+  repo: 'git@github.com:chenwangji/recipe.git'
+}, (e) => { console.log('done--', e) })
